@@ -8,22 +8,22 @@
   "regions": [
     {
       "id": "01G10FG3TK5FKSRAKD6ZH5EZS0",
-      "title": "Venstre",
+      "title": "Top",
       "gridArea": [
         "a",
-        "c"
-      ]
-    },
-    {
-      "id": "01G10FG9SB0G0C8MBTHVE8078T",
-      "title": "Højre top",
-      "gridArea": [
         "b"
       ]
     },
     {
-      "id": "01G10FGGXRCFMZ6EDZ4VQ80WEZ",
+      "id": "01G10FG9SB0G0C8MBTHVE8078T",
       "title": "Højre bund",
+      "gridArea": [
+        "c"
+      ]
+    },
+    {
+      "id": "01G10FGGXRCFMZ6EDZ4VQ80WEZ",
+      "title": "Venstre bund",
       "gridArea": [
         "d"
       ]
