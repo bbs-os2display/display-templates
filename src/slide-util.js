@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -50,6 +50,37 @@ function getAllMediaUrlsFromField(mediaData, field) {
   return [];
 }
 
+function useDimensions(ref) {
+  const getDimensions = () => ({
+    width: ref.current?.offsetWidth || 0,
+    height: ref.current?.offsetHeight || 0,
+  });
+
+  const [dimensions, setDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions(getDimensions());
+    };
+
+    if (ref.current) {
+      handleResize();
+    }
+
+    // The resize event will probably never occur in real life, but there's not
+    // reason to not support it.
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [ref]);
+
+  return dimensions;
+}
+
 /**
  * Create a theme style for a slide.
  *
@@ -76,4 +107,4 @@ ThemeStyles.propTypes = {
   css: PropTypes.string,
 };
 
-export { getAllMediaUrlsFromField, getFirstMediaUrlFromField, ThemeStyles };
+export { getAllMediaUrlsFromField, getFirstMediaUrlFromField, ThemeStyles, useDimensions };

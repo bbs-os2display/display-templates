@@ -1,0 +1,60 @@
+/**
+ We need to specify the absolute url for fonts. The reason for this is how
+  remote components work. In short the urls for the fonts is created as
+  relative which is fine, but when included as a remote component that path is
+  relative to the client JS including the remote component and not the remote
+  component js file, which means that fonts doesn't work. By manually
+  specifying src twice, webpack will use the first to compile the file and the
+  second will be used.
+  This is not a great solution, but more a work around due to the defect of
+  remote component library which is used by the display client.
+ */
+$absolute_url: "https://raw.githubusercontent.com/os2display/display-templates/develop/build/fonts";
+/** Esja font definition */
+@font-face {
+  font-family: "Esja";
+  src: url("./Esja/Esja-Regular.woff") format("woff"),
+  url("./Esja/Esja-Regular.woff2") format("woff2"),
+  url("./Esja/Esja-Regular.otf") format("opentype");
+  src: url("#{$absolute_url}/Esja-Regular.woff") format("woff"),
+  url("#{$absolute_url}/Esja-Regular.woff2") format("woff2"),
+  url("#{$absolute_url}/Esja-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Esja";
+  src: url("./Esja/Esja-RegularItalic.woff") format("woff"),
+  url("./Esja/Esja-RegularItalic.woff2") format("woff2"),
+  url("./Esja/Esja-RegularItalic.otf") format("opentype");
+  src: url("#{$absolute_url}/Esja-RegularItalic.woff") format("woff"),
+  url("#{$absolute_url}/Esja-RegularItalic.woff2") format("woff2"),
+  url("#{$absolute_url}/Esja-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Esja";
+  src: url("./Esja/Esja-Bold.woff") format("woff"),
+  url("./Esja/Esja-Bold.woff2") format("woff2"),
+  url("./Esja/Esja-Bold.otf") format("opentype");
+  src: url("#{$absolute_url}/Esja-Bold.woff") format("woff"),
+  url("#{$absolute_url}/Esja-Bold.woff2") format("woff2"),
+  url("#{$absolute_url}/Esja-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Esja";
+  src: url("./Esja/Esja-BoldItalic.woff") format("woff"),
+  url("./Esja/Esja-BoldItalic.woff2") format("woff2"),
+  url("./Esja/Esja-BoldItalic.otf") format("opentype");
+  src: url("#{$absolute_url}/Esja-BoldItalic.woff") format("woff"),
+  url("#{$absolute_url}/Esja-BoldItalic.woff2") format("woff2"),
+  url("#{$absolute_url}/Esja-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}

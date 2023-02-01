@@ -47,6 +47,7 @@ const entry = devMode
       table: path.resolve(__dirname, "./src/table/table.js"),
       video: path.resolve(__dirname, "./src/video/video.js"),
       travel: path.resolve(__dirname, "./src/travel/travel.js"),
+      event: path.resolve(__dirname, "./src/event/event.js"),
     };
 
 const timestamp = new Date().getTime();
@@ -141,7 +142,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(woff)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff|woff2|otf)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: "file-loader",
@@ -182,5 +183,11 @@ module.exports = {
       "display-templates.local.itkdev.dk",
     ],
     stats: "minimal",
+  },
+  resolve: {
+    fallback: {
+      timers: require.resolve("timers-browserify"),
+      stream: require.resolve("stream-browserify"),
+    }
   },
 };

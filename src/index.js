@@ -23,6 +23,7 @@ import Table from "./table/table";
 import Video from "./video/video";
 import Travel from "./travel/travel";
 import "./index.css";
+import Event from './event/event';
 
 export const renderScreen = (screen) => {
   const gridTemplateAreas = {
@@ -77,6 +78,16 @@ export const renderSlide = (slide) => {
     case "contacts":
       return (
         <Contacts
+          content={slide.content}
+          slide={slide}
+          run={new Date().toISOString()}
+          slideDone={() => {}}
+          executionId="SLIDE_ID"
+        />
+      );
+    case "event":
+      return (
+        <Event
           content={slide.content}
           slide={slide}
           run={new Date().toISOString()}
@@ -205,7 +216,7 @@ export const Slide = ({ slide: inputSlide }) => {
     } else {
       document.documentElement.classList.add("color-scheme-light");
     }
-  }, [slide]);
+  }, []);
 
   return (
     <div className="app">

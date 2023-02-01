@@ -774,6 +774,18 @@ const slides = [
       fontSize: "font-size-m",
     },
   },
+  {
+    id: "slide15-event",
+    type: "event",
+    themeFile: "themes/dokk1.css",
+    content: {
+      duration: 5000,
+      feed: 'https://borgarbokasafn.is/bbs-event-rss',
+      amount: 12,
+      bgColor: '#fff',
+      textColor: 'purple',
+    },
+  },
 ];
 
 export default slides;

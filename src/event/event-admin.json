@@ -1,0 +1,52 @@
+[
+  {
+    "key": "event-form-ui-title",
+    "input": "header",
+    "text": "Skabelon: Event",
+    "name": "ui-title",
+    "formGroupClasses": "h4 mb-3"
+  },
+  {
+    "key": "event-form-amount",
+    "input": "input",
+    "name": "amount",
+    "type": "text",
+    "label": "Antal slides",
+    "formGroupClasses": "col-md-6"
+  },
+  {
+    "key": "event-form-feed",
+    "input": "input",
+    "name": "feed",
+    "type": "text",
+    "label": "Feed URL",
+    "formGroupClasses": "col-md-6"
+  },
+  {
+    "key": "event-form-bgColor",
+    "input": "input",
+    "name": "bgColor",
+    "type": "text",
+    "label": "Baggrundsfarve",
+    "formGroupClasses": "col-md-6"
+  },
+  {
+    "key": "event-form-textColor",
+    "input": "input",
+    "name": "textColor",
+    "type": "text",
+    "label": "Tekstfarve",
+    "formGroupClasses": "col-md-6"
+  },
+  {
+    "key": "event-form-duration",
+    "input": "duration",
+    "name": "duration",
+    "min": "1",
+    "type": "number",
+    "label": "Varighed (i sekunder)",
+    "helpText": "Her skal du skrive varigheden på slidet.",
+    "required": true,
+    "formGroupClasses": "col-md-6 mb-3"
+  }
+]
