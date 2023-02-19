@@ -99,7 +99,7 @@ const plugins = devMode
                     "https://display-templates.local.itkdev.dk/build/",
                     "g"
                   ),
-                  "https://raw.githubusercontent.com/os2display/display-templates/main/build/"
+                  "https://raw.githubusercontent.com/bbs-os2display/display-templates/main/build/"
                 );
             },
           },
@@ -122,7 +122,7 @@ const plugins = devMode
                     "https://display-templates.local.itkdev.dk/build/",
                     "g"
                   ),
-                  "https://raw.githubusercontent.com/os2display/display-templates/develop/build/"
+                  "https://raw.githubusercontent.com/bbs-os2display/display-templates/develop/build/"
                 );
             },
           },
